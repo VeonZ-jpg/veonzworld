@@ -1,0 +1,85 @@
+  .fixed-text {
+    position: fixed;      /* tetap di layar saat scroll */
+    bottom: 20px;         /* jarak dari bawah */
+    right: 20px;          /* jarak dari kanan */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    z-index: 1000;       
+  }
+
+body{
+    background-color: rgb(12, 6, 6);
+}
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.gallery a {
+  display: block;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.gallery img {
+  width: 100%;       /* gambar mengikuti lebar container */
+  max-width: 300px;  /* batas maksimum di desktop */
+  height: auto;      /* menjaga rasio */
+  display: block;
+  filter: grayscale(100%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  max-width: 900px;  /* container maksimal di PC */
+  margin: 0 auto;
+}
+
+/* Hover efek: berwarna + zoom */
+.gallery a:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* Klik efek: menonjol + lebih cerah */
+.gallery a:active img {
+  transform: scale(0.95);
+  filter: grayscale(0%) brightness(1.1);
+}
+
+@media (max-width: 600px) {
+  .gallery img {
+    max-width: 100%; /* di HP, gambar bisa lebih besar sesuai layar */
+  }
+}
+
+.gallery a:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+.gallery a:active img {
+  transform: scale(0.95);
+  filter: grayscale(0%) brightness(1.1);
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 12px;}
+
+</style>

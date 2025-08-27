@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(12, 6, 6);
+}
+
+  .fixed-text {
+    position: fixed;      /* tetap di layar saat scroll */
+    bottom: 20px;         /* jarak dari bawah */
+    right: 20px;          /* jarak dari kanan */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    z-index: 1000;       
+  }
+
+    .fixed-center-img {
+    position: fixed;        /* tetap di layar saat scroll */
+    top: 50%;               /* vertikal tengah */
+    left: 50%;              /* horizontal tengah */
+    transform: translate(-50%, -50%); /* benar-benar di tengah */
+    width: 300px;           /* ukuran sedang, bisa disesuaikan */
+    height: auto;           /* menjaga proporsi */
+    z-index: -1;            /* berada di belakang konten */
+    pointer-events: none;   /* biar konten bisa diklik */
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding-top: 50px;
+    color: #333;
+  }

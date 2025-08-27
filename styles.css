@@ -1,24 +1,56 @@
 head
 .logo{
    
-    align="center"
+    align:"center"
     padding-bottom: 20px;
 }
   
   
 body {
     font-family: 'IM Fell DW Pica', serif;
-    font-size: small; 
-    height: 100vh;
+    font-weight:  12px;-small
+    height: 14px;
     margin-left: 45px;
-    margin-top: 30px;
- 
-  } 
+    margin-top: 30px;}
 
-.container {
-  display: flex;
-  gap: 20px;
+ .link{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 12px;
+  align-content: center;
+ }
+
+ .clickable-text {
+  font-size: 1.2rem;
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
+
+.clickable-text:hover {
+  color: #ffffff; /* efek saat hover */
+}
+.container {
+ flex-direction: row;
+ flex-wrap: wrap;
+}
+ .item
+ {flex-basis: 200;}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+}
+h1, h2, h3, h4, h5, h6, p {
+  font-size: clamp(0.8rem, 1vw, 1.5rem);
+}
+
+/* Responsive image */
+img {
+  max-width: 100%;
+  height: 90px;
+  display: block;}
 
 
 .footer {
@@ -31,21 +63,5 @@ body {
     padding: 10px 0;
     font-size: 12px;}
 
-
-/* Responsive untuk layar kecil (HP) */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column; /* dari horizontal jadi vertikal */
-    padding: 10px;
-  }
-
-  img {
-    max-width: 100%; /* gambar mengecil otomatis */
-    height: auto;
-  }
-
-  h1 {
-    font-size: 24px; /* teks judul lebih kecil */
-  }
 
 
